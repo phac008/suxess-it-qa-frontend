@@ -1,0 +1,43 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: suxess-it-qa-poi-map-app-dev
+  annotations:
+    argocd/app-name: suxess-it-qa-poi-map-app-dev
+    backstage.io/kubernetes-id: suxess-it-qa-poi-map-app-dev
+    backstage.io/kubernetes-namespace: suxess-it-qa
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=suxess-it-qa-poi-map-app-dev'
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: phac008/suxess-it-qa-frontend
+  tags:
+    - typescript
+    - angular
+    - workshop
+  links:
+    - url: https://console-openshift-console.apps.cluster1.mcp.pitagora.at/dev-pipelines/ns/suxess-it-qa/
+      title: Pipelines
+      icon: web
+    - url: https://console-openshift-console.apps.cluster1.mcp.pitagora.at/k8s/ns/suxess-it-qa/deployments/poi-map-app
+      title: Deployment
+      icon: web
+    - url: https://devspaces.apps.cluster1.mcp.pitagora.at/#https://github.com/phac008/suxess-it-qa-frontend?che-editor=che-incubator/che-code/latest&devfilePath=.devfile-vscode.yaml
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "guests"
+  system: workshop-system-suxess-it-qa
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: workshop-system-suxess-it-qa
+  tags:
+    - backstage
+    - janus-idp
+    - openshift
+    - workshop
+    - rh-summit
+spec:
+  owner: "guests"
