@@ -9,8 +9,8 @@ metadata:
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=suxess-it-qa-poi-map-app-dev'
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: phac008/suxess-it-qa-frontend
-    kubecost.com/deployment-name: suxess-it-qa-poi-map-app-dev
-    kubecost.com/host: "https://kubecost-cost-analyzer-route-sx-kubecost.apps.cluster1.mcp.pitagora.at"
+    kubecost/deployment-name: "suxess-it-qa-poi-map-app-dev"
+    kubecost/host: "https://kubecost-cost-analyzer-route-sx-kubecost.apps.cluster1.mcp.pitagora.at"
   tags:
     - typescript
     - angular
